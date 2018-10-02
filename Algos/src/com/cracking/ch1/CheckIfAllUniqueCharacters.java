@@ -4,6 +4,10 @@ public class CheckIfAllUniqueCharacters {
 
 	
 	public boolean checkAllUniqueChars(String s){
+		//Time Complexity : O(n)
+		//Space Complexity: O(n)
+		
+		
 		//Because more than 256 chars not possible
 		boolean char_set[] =  new boolean[256];
 		
