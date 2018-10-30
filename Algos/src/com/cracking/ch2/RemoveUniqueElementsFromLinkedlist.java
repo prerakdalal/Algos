@@ -1,11 +1,36 @@
 package com.cracking.ch2;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class RemoveUniqueElementsFromLinkedlist {
 
 	
 	
+	public Node removeUniqueElementUsingHashset(Node n){
+		 Node current  = n;
+		 Set<Integer> set = new HashSet<Integer>();
+		 
+		 Node previous = current;
+		 
+		 while(current!=null){
+			 if(!set.add(current.getValue())){
+				 previous.next = current.next;
+			 }else{
+				 previous = current;
+			 }
+			 
+			 current = current.next;			 
+		 }
+		 
+		 return n;
+	}
 	
-	public void removeUniqueElements(LinkelistNode n){
+	
+	
+	
+	
+	public void removeUniqueElements(Node n){
 	
 		Node current=n;
 		
